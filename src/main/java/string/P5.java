@@ -1,6 +1,8 @@
 package string;
 
-import java.util.Random;
+
+import junit.framework.TestCase;
+import org.assertj.core.api.Assertions;
 
 /**
  *  Given a string s, find the longest palindromic substring in s. 
@@ -8,9 +10,9 @@ import java.util.Random;
  *  
  *  Example- input:"babcd" output: "bab"
  */
-public class P5 {
+public class P5 extends TestCase {
 	
-	public String longestPalindrome(String s) {
+	public String solution(String s) {
 		// 只取index，中间避免subString操作，可减少所需时间
 		int start = 0, end = 0;
 	    for (int i = 0; i < s.length(); i++) {
@@ -33,8 +35,11 @@ public class P5 {
 	    return right - left - 1;
 	}
 
-	public static void main(String[] args) {
-		String str = "bb";
-		System.out.println(new P5().longestPalindrome(str));
+
+	// region test
+	public void test() {
+		String str = "babcd";
+		Assertions.assertThat(new P5().solution(str)).isEqualTo("bab");
 	}
+	// endregion
 }
