@@ -1,4 +1,4 @@
-package hashtable;
+package hash;
 
 import junit.framework.TestCase;
 import org.assertj.core.api.Assertions;
