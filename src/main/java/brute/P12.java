@@ -1,6 +1,7 @@
 package brute;
 
 import junit.framework.TestCase;
+import util.NotSolved;
 import util.Tuple;
 
 /**
@@ -28,6 +29,7 @@ import util.Tuple;
  * Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999
  */
 
+@NotSolved
 public class P12 extends TestCase {
 
     public String intToRoman(int num) {
