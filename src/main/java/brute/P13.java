@@ -1,7 +1,6 @@
 package brute;
 
 import junit.framework.TestCase;
-import util.NotSolved;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +24,6 @@ import java.util.Map;
  * Output: 9
  */
 
-@NotSolved
 public class P13 extends TestCase {
 
     public int romanToInt(String s) {

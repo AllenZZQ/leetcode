@@ -1,8 +1,7 @@
-package twoPoniter;
+package twoPointer;
 
 import junit.framework.TestCase;
 import org.assertj.core.api.Assertions;
-import util.NotSolved;
 import util.UnAcceptable;
 
 /**
@@ -10,7 +9,6 @@ import util.UnAcceptable;
  * Find two lines, which together with x-axis forms a container, such that the container contains the most water.
  */
 
-@NotSolved
 public class P11 extends TestCase {
 
     @UnAcceptable
