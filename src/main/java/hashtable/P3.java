@@ -39,7 +39,6 @@ public class P3 extends TestCase {
     }
 
 
-
     public void test() {
         int a = 'z';
         System.out.println(a);

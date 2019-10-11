@@ -49,8 +49,6 @@ public class P1 extends TestCase {
         return null;
     }
 
-
-
     public void test() {
         System.out.println(JSON.toJSONString(twoSum2(new int[]{2, 2, 7, 11, 15}, 4)));
     }

@@ -51,8 +51,6 @@ public class P10 extends TestCase {
     }
 
 
-
-
     public void test() {
         System.out.println(isMatch2("ab", "ab"));
         System.out.println(isMatch2("ab", ".*c"));
