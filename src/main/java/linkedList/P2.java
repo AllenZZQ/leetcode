@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedList;
 
 import junit.framework.TestCase;
 
@@ -14,9 +14,12 @@ public class P2 extends TestCase {
             int x1 = l1 != null ? l1.val : 0;
             int x2 = l2 != null ? l2.val : 0;
             int sum = x1 + x2 + carry;
-            current.next = new ListNode(sum % 10);
+
+            carry = sum > 9 ? 1 : 0;
+            int val = sum > 9 ? sum - 10 : sum;
+            current.next = new ListNode(val);
             current = current.next;
-            carry = sum / 10;
+
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }
@@ -25,10 +28,6 @@ public class P2 extends TestCase {
 
 
     public void test() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = n1.next;
-        n2 = new ListNode(-1);
-        System.out.println(n1.next.val);
     }
 
 }
