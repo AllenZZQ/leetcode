@@ -2,9 +2,42 @@ package linkedList;
 
 import junit.framework.TestCase;
 
-public class P92 extends TestCase {
+public class Util extends TestCase {
 
-    public ListNode reverseBetween(ListNode head, int m, int n) {
+    /**
+     * 获取一个node的中间
+     *
+     * @param head
+     * @return
+     */
+    public static ListNode middle(ListNode head, boolean cut) {
+        ListNode slow = head;
+        ListNode fast = head;
+        ListNode pre = null;
+        while (fast != null && fast.next != null) {
+            pre = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        if (cut && pre != null) {
+            pre.next = null;
+        }
+        return slow;
+    }
+
+    public static ListNode reverse(ListNode head) {
+        ListNode pre = null;
+        ListNode cur = head;
+        while (cur != null) {
+            ListNode next = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = next;
+        }
+        return pre;
+    }
+
+    public static ListNode reverse(ListNode head, int m, int n) {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode cur = head;
@@ -27,18 +60,16 @@ public class P92 extends TestCase {
             return head;
         }
 
-        ListNode p = pre;
         for (i = 0; i < n - m; i++) {
             ListNode next = cur.next;
             cur.next = pre;
             pre = cur;
             cur = next;
         }
-        p.next = cur;
+        slow.next.next = cur;
         slow.next = pre;
         return dummy.next;
     }
-
 
     public void test() {
         ListNode head = new ListNode(1);
@@ -51,7 +82,8 @@ public class P92 extends TestCase {
         p = p.next;
         p.next = new ListNode(5);
 
-        ListNode n = reverseBetween(head, 2, 4);
+        ListNode n = reverse(head.next, 2, 3);
+        System.out.println(n);
     }
 
 

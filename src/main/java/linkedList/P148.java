@@ -46,4 +46,5 @@ public class P148 {
         }
         return slow;
     }
+
 }
