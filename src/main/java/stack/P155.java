@@ -16,9 +16,11 @@ public class P155 extends TestCase {
 
 class MinStack {
 
+    public static void main(String[] args) {
+    }
+
     private Node head;
 
-    // TODO zhaoziqiang 2019-11-10 static class?
     private class Node {
         int val;
         int min;

@@ -27,4 +27,12 @@ public class P42 {
         }
         return ans;
     }
+
+
+
+
+
+
+
+
 }
