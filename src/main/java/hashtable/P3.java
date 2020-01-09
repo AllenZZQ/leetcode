@@ -15,7 +15,7 @@ public class P3 extends TestCase {
         for (int left = 0, right = 0; right < length; right ++) {
             char c = s.charAt(right);
             if (char2index.containsKey(c)) {
-                // 注意取max
+                // 注意取max，不然可能会后退，如abba
                 left = Math.max(char2index.get(c), left);
             }
             ans = Math.max(ans, right - left + 1);
