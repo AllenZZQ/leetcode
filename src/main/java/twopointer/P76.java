@@ -7,5 +7,4 @@ import junit.framework.TestCase;
  */
 public class P76 extends TestCase {
 
-
 }
