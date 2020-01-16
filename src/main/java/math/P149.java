@@ -15,10 +15,8 @@ public class P149 extends TestCase {
             for (int j = i + 1; j < size; j ++) {
                 if (size - j + temp <= ans) break;
                 temp ++;
-                int x1 = points[i][0];
-                int y1 = points[i][1];
-                int x2 = points[j][0];
-                int y2 = points[j][1];
+                int x1 = points[i][0], y1 = points[i][1];
+                int x2 = points[j][0], y2 = points[j][1];
                 if (x1 == x2 && y1 == y2) {
                     repeat ++;
                     ans = Math.max(ans, temp);
@@ -27,9 +25,7 @@ public class P149 extends TestCase {
 
                 for (int p = j + 1; p < size; p ++) {
                     if (size - p + temp <= ans) break;
-
-                    int x3 = points[p][0];
-                    int y3 = points[p][1];
+                    int x3 = points[p][0], y3 = points[p][1];
                     if ((long) (y2 - y1) * (x3 - x1) == (long) (y3 - y1) * (x2 - x1)) {
                         temp ++;
                     }
